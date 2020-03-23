@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56238FF3DD9AFE50BAD355E4 /* Pods_Clothingland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E290EBC5FF97CD08B249C938 /* Pods_Clothingland.framework */; };
 		C6D8822A2429161200380890 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D882292429161200380890 /* AppDelegate.swift */; };
 		C6D8822C2429161200380890 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8822B2429161200380890 /* SceneDelegate.swift */; };
 		C6D8822E2429161200380890 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8822D2429161200380890 /* ViewController.swift */; };
-		C6D882312429161200380890 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D8822F2429161200380890 /* Main.storyboard */; };
 		C6D882332429161500380890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6D882322429161500380890 /* Assets.xcassets */; };
 		C6D882362429161500380890 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D882342429161500380890 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		307B19C9849514D1245DD87F /* Pods-Clothingland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clothingland.debug.xcconfig"; path = "Target Support Files/Pods-Clothingland/Pods-Clothingland.debug.xcconfig"; sourceTree = "<group>"; };
 		C6D882262429161200380890 /* Clothingland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clothingland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D882292429161200380890 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6D8822B2429161200380890 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C6D8822D2429161200380890 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C6D882302429161200380890 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6D882322429161500380890 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6D882352429161500380890 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6D882372429161500380890 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E290EBC5FF97CD08B249C938 /* Pods_Clothingland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clothingland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEDC1F61A5C9E7B4BD360E1C /* Pods-Clothingland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clothingland.release.xcconfig"; path = "Target Support Files/Pods-Clothingland/Pods-Clothingland.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56238FF3DD9AFE50BAD355E4 /* Pods_Clothingland.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DDB3F34805EBDFC1C3F12CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				307B19C9849514D1245DD87F /* Pods-Clothingland.debug.xcconfig */,
+				FEDC1F61A5C9E7B4BD360E1C /* Pods-Clothingland.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		83864F02D02E86D82913DA22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E290EBC5FF97CD08B249C938 /* Pods_Clothingland.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C6D8821D2429161200380890 = {
 			isa = PBXGroup;
 			children = (
 				C6D882282429161200380890 /* Clothingland */,
 				C6D882272429161200380890 /* Products */,
+				1DDB3F34805EBDFC1C3F12CE /* Pods */,
+				83864F02D02E86D82913DA22 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,7 +81,6 @@
 				C6D882292429161200380890 /* AppDelegate.swift */,
 				C6D8822B2429161200380890 /* SceneDelegate.swift */,
 				C6D8822D2429161200380890 /* ViewController.swift */,
-				C6D8822F2429161200380890 /* Main.storyboard */,
 				C6D882322429161500380890 /* Assets.xcassets */,
 				C6D882342429161500380890 /* LaunchScreen.storyboard */,
 				C6D882372429161500380890 /* Info.plist */,
@@ -74,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6D8823A2429161500380890 /* Build configuration list for PBXNativeTarget "Clothingland" */;
 			buildPhases = (
+				79411DD6F304764A13CFF4B6 /* [CP] Check Pods Manifest.lock */,
 				C6D882222429161200380890 /* Sources */,
 				C6D882232429161200380890 /* Frameworks */,
 				C6D882242429161200380890 /* Resources */,
@@ -127,11 +149,35 @@
 			files = (
 				C6D882362429161500380890 /* LaunchScreen.storyboard in Resources */,
 				C6D882332429161500380890 /* Assets.xcassets in Resources */,
-				C6D882312429161200380890 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		79411DD6F304764A13CFF4B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Clothingland-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C6D882222429161200380890 /* Sources */ = {
@@ -147,14 +193,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C6D8822F2429161200380890 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C6D882302429161200380890 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C6D882342429161500380890 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,11 +320,13 @@
 		};
 		C6D8823B2429161500380890 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 307B19C9849514D1245DD87F /* Pods-Clothingland.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VY93XGV7U7;
 				INFOPLIST_FILE = Clothingland/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,17 +334,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lsegoviano.dev.Clothingland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		C6D8823C2429161500380890 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEDC1F61A5C9E7B4BD360E1C /* Pods-Clothingland.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VY93XGV7U7;
 				INFOPLIST_FILE = Clothingland/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lsegoviano.dev.Clothingland;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
