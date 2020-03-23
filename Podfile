@@ -6,5 +6,7 @@ target 'Clothingland' do
   use_frameworks!
 
   # Pods for Clothingland
+  pod 'Alamofire'
+  pod 'AlamofireImage'
 
 end

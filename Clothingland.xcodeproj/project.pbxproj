@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		C6D8822E2429161200380890 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8822D2429161200380890 /* ViewController.swift */; };
 		C6D882332429161500380890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6D882322429161500380890 /* Assets.xcassets */; };
 		C6D882362429161500380890 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D882342429161500380890 /* LaunchScreen.storyboard */; };
+		C6D8823E2429382B00380890 /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8823D2429382B00380890 /* HttpManager.swift */; };
+		C6D88240242940E700380890 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8823F242940E700380890 /* Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C6D882322429161500380890 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6D882352429161500380890 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6D882372429161500380890 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6D8823D2429382B00380890 /* HttpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
+		C6D8823F242940E700380890 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		E290EBC5FF97CD08B249C938 /* Pods_Clothingland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clothingland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDC1F61A5C9E7B4BD360E1C /* Pods-Clothingland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clothingland.release.xcconfig"; path = "Target Support Files/Pods-Clothingland/Pods-Clothingland.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,10 +84,12 @@
 			children = (
 				C6D882292429161200380890 /* AppDelegate.swift */,
 				C6D8822B2429161200380890 /* SceneDelegate.swift */,
-				C6D8822D2429161200380890 /* ViewController.swift */,
 				C6D882322429161500380890 /* Assets.xcassets */,
 				C6D882342429161500380890 /* LaunchScreen.storyboard */,
 				C6D882372429161500380890 /* Info.plist */,
+				C6D8822D2429161200380890 /* ViewController.swift */,
+				C6D8823D2429382B00380890 /* HttpManager.swift */,
+				C6D8823F242940E700380890 /* Alerts.swift */,
 			);
 			path = Clothingland;
 			sourceTree = "<group>";
@@ -99,6 +105,7 @@
 				C6D882222429161200380890 /* Sources */,
 				C6D882232429161200380890 /* Frameworks */,
 				C6D882242429161200380890 /* Resources */,
+				8EB77490B5A5A6AC0A739C1A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -177,6 +184,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8EB77490B5A5A6AC0A739C1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Clothingland/Pods-Clothingland-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Clothingland/Pods-Clothingland-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Clothingland/Pods-Clothingland-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -185,8 +209,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6D8822E2429161200380890 /* ViewController.swift in Sources */,
+				C6D88240242940E700380890 /* Alerts.swift in Sources */,
 				C6D8822A2429161200380890 /* AppDelegate.swift in Sources */,
 				C6D8822C2429161200380890 /* SceneDelegate.swift in Sources */,
+				C6D8823E2429382B00380890 /* HttpManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
