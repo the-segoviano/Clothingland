@@ -10,10 +10,6 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-    fileprivate var filtered = [Country]()
-    
-    fileprivate var filterring = false
-    
     var countries: [Country] = []
     
     var storeViewsSelected: [StoreViews] = []
@@ -21,8 +17,8 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        navigationController?.navigationBar.prefersLargeTitles = true // Navigation bar large titles
-        navigationItem.title = "Countries"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "País e Idioma"
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.separatorStyle = .none
@@ -65,7 +61,7 @@ class ViewController: UITableViewController {
 extension ViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return self.filterring ? self.filtered.count : countries.count
+        return countries.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

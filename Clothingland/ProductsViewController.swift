@@ -34,12 +34,8 @@ class ProductsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true // Navigation bar large titles
-        navigationItem.title = "Products"
+        navigationItem.title = "Productos"
         self.view.backgroundColor = .white
-        /*
-        let filtersButton = UIBarButtonItem(image: UIImage(named: "filter"), style: .plain, target: self, action: #selector(applyFilters))
-        navigationItem.rightBarButtonItem = filtersButton
-        */
         self.view.addSubview(collectionViewProducts)
         self.view.addConstraintsWithFormat(format: "H:|[v0]|", views: collectionViewProducts)
         self.view.addConstraintsWithFormat(format: "V:|-[v0]|", views: collectionViewProducts)
@@ -47,11 +43,6 @@ class ProductsViewController: UIViewController {
         getProducts()
         
     }
-    
-    /*
-    @objc func applyFilters() {
-        print("applyFilters")
-    }*/
     
     func getProducts() {
         if let store_id = storeID, let category_id = categoryID {
@@ -79,7 +70,6 @@ class ProductsViewController: UIViewController {
             } // HttpManager
             
         }
-            
         
     } // getProducts
     
@@ -114,13 +104,5 @@ extension ProductsViewController: UICollectionViewDelegateFlowLayout, UICollecti
         let size = (collectionView.bounds.width/2) - 1
         return CGSize(width: size, height: size)
     }
-    
-    /*
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-         if (indexPath.row == products.count - 1 ) { //it's your last cell
-           //Load more data & reload your collection view
-            print(" Load more data & reload your collection view ")
-         }
-    }*/
         
 }

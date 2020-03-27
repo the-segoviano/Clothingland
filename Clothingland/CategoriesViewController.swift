@@ -43,7 +43,7 @@ class CategoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true // Navigation bar large titles
-        navigationItem.title = "Categories"
+        navigationItem.title = "Categorías"
         self.view.backgroundColor = .white
         self.view.addSubview(collectionViewCategories)
         self.view.addSubview(tableViewCategories)
