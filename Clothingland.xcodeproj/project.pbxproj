@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		56238FF3DD9AFE50BAD355E4 /* Pods_Clothingland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E290EBC5FF97CD08B249C938 /* Pods_Clothingland.framework */; };
+		C6C64101242D6F8500BA0619 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C64100242D6F8500BA0619 /* ImageDetailViewController.swift */; };
+		C6C64103242D6FC700BA0619 /* ImagesProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C64102242D6FC700BA0619 /* ImagesProductsCell.swift */; };
+		C6C64105242D6FFE00BA0619 /* SizesProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C64104242D6FFE00BA0619 /* SizesProductsCell.swift */; };
 		C6CF76CF242A6245007C6948 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF76CE242A6245007C6948 /* Helpers.swift */; };
 		C6CF76D1242AE55D007C6948 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF76D0242AE55D007C6948 /* CategoriesViewController.swift */; };
 		C6CF76D4242AE58D007C6948 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF76D3242AE58D007C6948 /* Country.swift */; };
 		C6CF76D6242AE5AF007C6948 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF76D5242AE5AF007C6948 /* Category.swift */; };
 		C6CF76D8242AFF52007C6948 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF76D7242AFF52007C6948 /* Product.swift */; };
 		C6CF76DA242AFFF4007C6948 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF76D9242AFFF4007C6948 /* ProductsViewController.swift */; };
+		C6CF76DD242BE937007C6948 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF76DC242BE937007C6948 /* ProductCell.swift */; };
+		C6CF76DF242BFF0B007C6948 /* DetailProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF76DE242BFF0B007C6948 /* DetailProductViewController.swift */; };
 		C6D8822A2429161200380890 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D882292429161200380890 /* AppDelegate.swift */; };
 		C6D8822C2429161200380890 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8822B2429161200380890 /* SceneDelegate.swift */; };
 		C6D8822E2429161200380890 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D8822D2429161200380890 /* ViewController.swift */; };
@@ -25,12 +30,17 @@
 
 /* Begin PBXFileReference section */
 		307B19C9849514D1245DD87F /* Pods-Clothingland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clothingland.debug.xcconfig"; path = "Target Support Files/Pods-Clothingland/Pods-Clothingland.debug.xcconfig"; sourceTree = "<group>"; };
+		C6C64100242D6F8500BA0619 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		C6C64102242D6FC700BA0619 /* ImagesProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesProductsCell.swift; sourceTree = "<group>"; };
+		C6C64104242D6FFE00BA0619 /* SizesProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizesProductsCell.swift; sourceTree = "<group>"; };
 		C6CF76CE242A6245007C6948 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		C6CF76D0242AE55D007C6948 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		C6CF76D3242AE58D007C6948 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		C6CF76D5242AE5AF007C6948 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		C6CF76D7242AFF52007C6948 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		C6CF76D9242AFFF4007C6948 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		C6CF76DC242BE937007C6948 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		C6CF76DE242BFF0B007C6948 /* DetailProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProductViewController.swift; sourceTree = "<group>"; };
 		C6D882262429161200380890 /* Clothingland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clothingland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D882292429161200380890 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6D8822B2429161200380890 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +126,11 @@
 				C6CF76CE242A6245007C6948 /* Helpers.swift */,
 				C6CF76D0242AE55D007C6948 /* CategoriesViewController.swift */,
 				C6CF76D9242AFFF4007C6948 /* ProductsViewController.swift */,
+				C6CF76DC242BE937007C6948 /* ProductCell.swift */,
+				C6CF76DE242BFF0B007C6948 /* DetailProductViewController.swift */,
+				C6C64102242D6FC700BA0619 /* ImagesProductsCell.swift */,
+				C6C64100242D6F8500BA0619 /* ImageDetailViewController.swift */,
+				C6C64104242D6FFE00BA0619 /* SizesProductsCell.swift */,
 			);
 			path = Clothingland;
 			sourceTree = "<group>";
@@ -234,15 +249,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6C64103242D6FC700BA0619 /* ImagesProductsCell.swift in Sources */,
+				C6CF76DF242BFF0B007C6948 /* DetailProductViewController.swift in Sources */,
 				C6D8822E2429161200380890 /* ViewController.swift in Sources */,
 				C6CF76CF242A6245007C6948 /* Helpers.swift in Sources */,
+				C6C64105242D6FFE00BA0619 /* SizesProductsCell.swift in Sources */,
 				C6D88240242940E700380890 /* Alerts.swift in Sources */,
 				C6D8822A2429161200380890 /* AppDelegate.swift in Sources */,
 				C6CF76DA242AFFF4007C6948 /* ProductsViewController.swift in Sources */,
 				C6CF76D4242AE58D007C6948 /* Country.swift in Sources */,
 				C6CF76D6242AE5AF007C6948 /* Category.swift in Sources */,
 				C6D8822C2429161200380890 /* SceneDelegate.swift in Sources */,
+				C6C64101242D6F8500BA0619 /* ImageDetailViewController.swift in Sources */,
 				C6CF76D8242AFF52007C6948 /* Product.swift in Sources */,
+				C6CF76DD242BE937007C6948 /* ProductCell.swift in Sources */,
 				C6CF76D1242AE55D007C6948 /* CategoriesViewController.swift in Sources */,
 				C6D8823E2429382B00380890 /* HttpManager.swift in Sources */,
 			);

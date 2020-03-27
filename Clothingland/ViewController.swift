@@ -23,14 +23,6 @@ class ViewController: UITableViewController {
         self.view.backgroundColor = .white
         navigationController?.navigationBar.prefersLargeTitles = true // Navigation bar large titles
         navigationItem.title = "Countries"
-        /*
-        let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Filter by Country..."
-        definesPresentationContext = true
-        self.navigationItem.searchController = searchController
-        */
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.separatorStyle = .none
@@ -67,27 +59,8 @@ class ViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
-}
-
-extension ViewController: UISearchControllerDelegate, UISearchResultsUpdating {
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        if let text = searchController.searchBar.text, !text.isEmpty {
-            self.filtered = self.countries.filter({ (country) -> Bool in
-                return country.name.lowercased().contains(text.lowercased())
-            })
-            self.filterring = true
-        }
-        else {
-            self.filterring = false
-            self.filtered = [Country]()
-        }
-        self.tableView.reloadData()
-    }
     
 }
-
-
 
 extension ViewController {
     
@@ -106,14 +79,12 @@ extension ViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        //cell.textLabel?.text = self.filterring ? self.filtered[indexPath.section].name : self.countries[indexPath.section].name
         cell.textLabel?.text = storeViewsSelected[indexPath.row].name
         cell.backgroundColor = UIColor.lightGray.withAlphaComponent(0.1)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let countrySelected = self.filterring ? self.filtered[indexPath.row] : self.countries[indexPath.row]
         let countrySelected = storeViewsSelected[indexPath.row]
         let vc = CategoriesViewController()
         vc.storeID = countrySelected.storeId
@@ -121,7 +92,6 @@ extension ViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let nameCountry = self.filterring ? self.filtered[section].name : self.countries[section].name
         let reloadSectionRecognizer = ReloadSectionTapGesture(target: self, action: #selector(ViewController.reloadSection(sender:)))
         reloadSectionRecognizer.section = section
         let headerInSection = UIView()
@@ -129,7 +99,7 @@ extension ViewController {
         headerInSection.addGestureRecognizer(reloadSectionRecognizer)
         let nameCountryLabel = UILabel()
         nameCountryLabel.translatesAutoresizingMaskIntoConstraints = false
-        nameCountryLabel.text = nameCountry
+        nameCountryLabel.text = self.countries[section].name
         headerInSection.addSubview(nameCountryLabel)
         nameCountryLabel.centerXAnchor.constraint(equalTo: headerInSection.centerXAnchor).isActive = true
         nameCountryLabel.centerYAnchor.constraint(equalTo: headerInSection.centerYAnchor).isActive = true

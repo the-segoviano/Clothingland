@@ -16,13 +16,18 @@ class ProductsViewController: UIViewController {
     
     var products: [Product] = []
     
-    lazy var tableViewProducts: UITableView = {
-        let tableView = UITableView()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
-        tableView.showsVerticalScrollIndicator = false
-        return tableView
+    lazy var collectionViewProducts: UICollectionView = {
+        let collectionViewLayout = UICollectionViewFlowLayout()
+        collectionViewLayout.minimumLineSpacing = 1
+        collectionViewLayout.minimumInteritemSpacing = 1
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: collectionViewLayout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = .white
+        collectionView.register(ProductCell.self, forCellWithReuseIdentifier: "ProductCell")
+        collectionView.showsVerticalScrollIndicator = false
+        return collectionView
     }()
     
     
@@ -31,14 +36,22 @@ class ProductsViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true // Navigation bar large titles
         navigationItem.title = "Products"
         self.view.backgroundColor = .white
-        
-        self.view.addSubview(tableViewProducts)
-        self.view.addConstraintsWithFormat(format: "H:|[v0]|", views: tableViewProducts)
-        self.view.addConstraintsWithFormat(format: "V:|-[v0]|", views: tableViewProducts)
+        /*
+        let filtersButton = UIBarButtonItem(image: UIImage(named: "filter"), style: .plain, target: self, action: #selector(applyFilters))
+        navigationItem.rightBarButtonItem = filtersButton
+        */
+        self.view.addSubview(collectionViewProducts)
+        self.view.addConstraintsWithFormat(format: "H:|[v0]|", views: collectionViewProducts)
+        self.view.addConstraintsWithFormat(format: "V:|-[v0]|", views: collectionViewProducts)
         
         getProducts()
         
     }
+    
+    /*
+    @objc func applyFilters() {
+        print("applyFilters")
+    }*/
     
     func getProducts() {
         if let store_id = storeID, let category_id = categoryID {
@@ -55,7 +68,7 @@ class ProductsViewController: UIViewController {
                         }
                         
                         DispatchQueue.main.async {
-                            self?.tableViewProducts.reloadData()
+                            self?.collectionViewProducts.reloadData()
                         }// DispatchQueue
                     }
                 }
@@ -73,18 +86,41 @@ class ProductsViewController: UIViewController {
     
 }
 
-
-extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension ProductsViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
+        
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return products.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let product = products[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = product.name
-        return cell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath)
+        if let cell = cell as? ProductCell {
+            let product = products[indexPath.row]
+            cell.releaseView()
+            cell.setUpView(product: product)
+            return cell
+        }
+        return UICollectionViewCell()
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let product = products[indexPath.row]
+        let vc = DetailProductViewController()
+        vc.product = product
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let size = (collectionView.bounds.width/2) - 1
+        return CGSize(width: size, height: size)
+    }
+    
+    /*
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+         if (indexPath.row == products.count - 1 ) { //it's your last cell
+           //Load more data & reload your collection view
+            print(" Load more data & reload your collection view ")
+         }
+    }*/
+        
 }
