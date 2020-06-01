@@ -11,8 +11,8 @@ import Alamofire
 
 class HttpManager {
     
-    private static let scheme = "http://"
-    private static var host   = "private-anon-99c07a1cf1-gocco.apiary-mock.com" //"polls.apiblueprint.org"
+    private static let scheme = "https://"
+    private static var host   = "private-anon-82100d67b3-gocco.apiary-mock.com" // "polls.apiblueprint.org"
     private static let path   = ""
     
     /**
